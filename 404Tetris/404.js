@@ -9,7 +9,8 @@ const COLORS = ["#000", "#f00", "#0f0", "#00f", "#f80", "#f0f", "#0ff", "#ff0"];
 let board = createBoard();
 let currentPiece = generateRandomPiece();
 let gameOver = false;
-let speed = 1;
+let speed = 3;
+const keys = {};
 
 function createBoard() {
     return Array.from({ length: ROWS }, () => Array(COLUMNS).fill(0));
@@ -101,12 +102,16 @@ function mergePiece() {
 }
 
 function checkForCompletedRows() {
+    let completedRows = [];
     for (let row = ROWS - 1; row >= 0; row--) {
         if (board[row].every(block => block !== 0)) {
-            board.splice(row, 1);
-            board.unshift(Array(COLUMNS).fill(0));
+           completedRows.push(row);
         }
     }
+    completedRows.forEach(row=> {
+        board.slice(row,1);
+        board.unshift(Array(COLUMNS).fill(0));
+    });
 }
 
 function generateRandomPiece() {
@@ -145,7 +150,9 @@ function draw() {
     }
 }
 
-function handleKeyPress(event) {
+function handleKeyDown(event) {
+    keys[event.key] = true;
+
     if (!gameOver) {
         switch (event.key) {
             case "ArrowLeft":
@@ -154,25 +161,52 @@ function handleKeyPress(event) {
             case "ArrowRight":
                 movePieceRight();
                 break;
-            case "ArrowDown":
-                movePieceDown();
-                break;
             case "ArrowUp":
                 rotatePiece();
+                break;
+            case "ArrowDown":
+                event.preventDefault();
+                movePieceDown();
                 break;
         }
     }
 }
 
-document.addEventListener("keydown", handleKeyPress);
+function  handleKeyUp(event) {
+    keys[event.key]= false;
+
+}
+document.addEventListener("keydown", handleKeyDown);
+document.addEventListener("keyup", handleKeyUp);
+
+function handleContinuousKeypress(){
+    if (keys["ArrowLeft"]){
+        movePieceLeft();
+    }
+    if (keys["ArrowRight"]){
+        movePieceRight();
+    }
+    if (keys["ArrowDown"]){
+        movePieceDown();
+    }
+    if (keys["ArrowUp"]){
+        rotatePiece();
+    }
+    draw();
+}
+
+handleContinuousKeypress()
 
 function gameLoop() {
     draw();
+
     if (!gameOver) {
+
         setTimeout(() => {
             requestAnimationFrame(gameLoop);
         }, 1000 / speed);
     }
 }
+
 
 gameLoop();

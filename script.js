@@ -14,15 +14,6 @@ function loadLanguageFile(lang) {
         return response.json();
     });
 }
-function changeLanguage(lang) {
-    return __awaiter(this, void 0, void 0, function* () {
-        const translations = yield loadLanguageFile(lang);
-        const greetingElement = document.getElementById('greeting');
-        if (greetingElement) {
-            greetingElement.textContent = translations.title;
-        }
-    });
-}
 const enButton = document.getElementById('en');
 const frButton = document.getElementById('fr');
 if (enButton) {
@@ -36,4 +27,30 @@ function afficherSelection() {
     const choix = selectElement.value;
     changeLanguage(choix);
 }
-changeLanguage('fr');
+function setLanguageCookie(lang) {
+    document.cookie = `lang=${lang};path=/;max-age=31536000`; // max-age est fixé à un an
+}
+function getLanguageFromCookie() {
+    const match = document.cookie.match(/(^|;) ?lang=([^;]*)(;|$)/);
+    return match ? match[2] : null;
+}
+function changeLanguage(lang) {
+    return __awaiter(this, void 0, void 0, function* () {
+        setLanguageCookie(lang); // Met à jour le cookie
+        const translations = yield loadLanguageFile(lang);
+        const greetingElement = document.getElementById('greeting');
+        if (greetingElement) {
+            greetingElement.textContent = translations.title;
+        }
+    });
+}
+function initializeLanguage() {
+    const savedLang = getLanguageFromCookie();
+    if (savedLang) {
+        changeLanguage(savedLang);
+    }
+    else {
+        changeLanguage('fr');
+    }
+}
+initializeLanguage();

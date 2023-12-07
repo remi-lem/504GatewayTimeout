@@ -3,14 +3,6 @@ async function loadLanguageFile(lang: string): Promise<any> {
   return response.json();
 }
 
-async function changeLanguage(lang: string) {
-  const translations = await loadLanguageFile(lang);
-  const greetingElement = document.getElementById('greeting');
-  if (greetingElement) {
-    greetingElement.textContent = translations.title;
-  }
-}
-
 const enButton = document.getElementById('en');
 const frButton = document.getElementById('fr');
 
@@ -28,5 +20,31 @@ function afficherSelection(): void {
   const choix: string = selectElement.value;
   changeLanguage(choix);
 }
+function setLanguageCookie(lang: string) {
+  document.cookie = `lang=${lang};path=/;max-age=31536000`; // max-age est fixé à un an
+}
 
-changeLanguage('fr');
+function getLanguageFromCookie(): string | null {
+  const match = document.cookie.match(/(^|;) ?lang=([^;]*)(;|$)/);
+  return match ? match[2] : null;
+}
+
+async function changeLanguage(lang: string) {
+  setLanguageCookie(lang); // Met à jour le cookie
+
+  const translations = await loadLanguageFile(lang);
+  const greetingElement = document.getElementById('greeting');
+  if (greetingElement) {
+    greetingElement.textContent = translations.title;
+  }
+}
+function initializeLanguage() {
+  const savedLang = getLanguageFromCookie();
+  if (savedLang) {
+    changeLanguage(savedLang);
+  } else {
+    changeLanguage('fr');
+  }
+}
+
+initializeLanguage();

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404</title>
+    <title>Tetris</title>
+    <link rel="stylesheet" href="CSS/404.css">
     <style>
         canvas {
             border: 1px solid #000;
@@ -13,7 +14,25 @@
     </style>
 </head>
 <body>
-<canvas id="tetrisCanvas" width="300" height="600"></canvas>
+
+<div class="error">
+    <h1> <img src="Images/Erreur404.png"> </h1>
+    <p> <img src="Images/PageIntrouvable.png"> </p>
+    <h2> <img src="Images/Score404.png"> </h2>
+</div>
+
+<div id="game-container">
+    <canvas id="tetrisCanvas" width="300" height="600"></canvas>
+    <div id="score"> <img src="Images/Score.png"> </div>
+</div>
+
 <script src="404.js"></script>
+<script>
+    try {
+        document.write('<script src="tetris.js"><\/script>');
+    } catch (e) {
+        document.getElementById("error").innerText = "Erreur 404: Fichier JavaScript introuvable.";
+    }
+</script>
 </body>
 </html>

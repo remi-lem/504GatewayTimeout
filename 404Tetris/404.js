@@ -106,17 +106,18 @@ function checkForCompletedRows() {
     let completedRows = [];
     for (let row = ROWS - 1; row >= 0; row--) {
         if (board[row].every(block => block !== 0)) {
-           completedRows.push(row);
+            completedRows.push(row);
         }
     }
 
-    if (completedRows.length > 0 ){
-        completedRows.forEach(row=> {
-            board.slice(row,1);
+    if (completedRows.length > 0) {
+        completedRows.forEach(row => {
+            board.splice(row, 1);
             board.unshift(Array(COLUMNS).fill(0));
         });
     }
 }
+
 
 function generateRandomPiece() {
     const pieces = [

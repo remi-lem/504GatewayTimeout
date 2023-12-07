@@ -9,7 +9,7 @@ const COLORS = ["#000", "#f00", "#0f0", "#00f", "#f80", "#f0f", "#0ff", "#ff0"];
 let board = createBoard();
 let currentPiece = generateRandomPiece();
 let gameOver = false;
-let speed = 3;
+let speed = 4;
 const keys = {};
 
 function createBoard() {
@@ -43,10 +43,11 @@ function drawPiece() {
 }
 
 function movePieceDown() {
-    currentPiece.y++;
+    currentPiece.y+=1;
     if (isCollision()) {
         currentPiece.y--;
         mergePiece();
+        checkForCompletedRows()
         currentPiece = generateRandomPiece();
         if (isCollision()) {
             gameOver = true;
@@ -55,14 +56,14 @@ function movePieceDown() {
 }
 
 function movePieceLeft() {
-    currentPiece.x--;
+    currentPiece.x-=1;
     if (isCollision()) {
         currentPiece.x++;
     }
 }
 
 function movePieceRight() {
-    currentPiece.x++;
+    currentPiece.x+=1;
     if (isCollision()) {
         currentPiece.x--;
     }
@@ -98,8 +99,8 @@ function mergePiece() {
             }
         });
     });
-    checkForCompletedRows();
 }
+
 
 function checkForCompletedRows() {
     let completedRows = [];
@@ -108,10 +109,13 @@ function checkForCompletedRows() {
            completedRows.push(row);
         }
     }
-    completedRows.forEach(row=> {
-        board.slice(row,1);
-        board.unshift(Array(COLUMNS).fill(0));
-    });
+
+    if (completedRows.length > 0 ){
+        completedRows.forEach(row=> {
+            board.slice(row,1);
+            board.unshift(Array(COLUMNS).fill(0));
+        });
+    }
 }
 
 function generateRandomPiece() {

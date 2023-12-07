@@ -21,7 +21,7 @@ function afficherSelection(): void {
   changeLanguage(choix);
 }
 function setLanguageCookie(lang: string) {
-  document.cookie = `lang=${lang};path=/;max-age=31536000`; // max-age est fixé à un an
+  document.cookie = `lang=${lang};path=/;max-age=31536000`;
 }
 
 function getLanguageFromCookie(): string | null {
@@ -30,14 +30,20 @@ function getLanguageFromCookie(): string | null {
 }
 
 async function changeLanguage(lang: string) {
-  setLanguageCookie(lang); // Met à jour le cookie
+  setLanguageCookie(lang);
 
   const translations = await loadLanguageFile(lang);
   const greetingElement = document.getElementById('greeting');
   if (greetingElement) {
     greetingElement.textContent = translations.title;
   }
+
+  const selectElement = document.getElementById('options') as HTMLSelectElement;
+  if (selectElement) {
+    selectElement.value = lang;
+  }
 }
+
 function initializeLanguage() {
   const savedLang = getLanguageFromCookie();
   if (savedLang) {

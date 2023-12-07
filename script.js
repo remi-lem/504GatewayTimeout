@@ -28,7 +28,7 @@ function afficherSelection() {
     changeLanguage(choix);
 }
 function setLanguageCookie(lang) {
-    document.cookie = `lang=${lang};path=/;max-age=31536000`; // max-age est fixé à un an
+    document.cookie = `lang=${lang};path=/;max-age=31536000`;
 }
 function getLanguageFromCookie() {
     const match = document.cookie.match(/(^|;) ?lang=([^;]*)(;|$)/);
@@ -36,11 +36,15 @@ function getLanguageFromCookie() {
 }
 function changeLanguage(lang) {
     return __awaiter(this, void 0, void 0, function* () {
-        setLanguageCookie(lang); // Met à jour le cookie
+        setLanguageCookie(lang);
         const translations = yield loadLanguageFile(lang);
         const greetingElement = document.getElementById('greeting');
         if (greetingElement) {
             greetingElement.textContent = translations.title;
+        }
+        const selectElement = document.getElementById('options');
+        if (selectElement) {
+            selectElement.value = lang;
         }
     });
 }

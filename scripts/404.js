@@ -175,11 +175,11 @@ function draw() {
         if (score === 404) {
 
             document.getElementById("congratulations-message").style.display = "block";
-            document.getElementById("final-score").innerText = "Score: " + score;
+            document.getElementById("finalScoreWin").innerText = "Score: " + score;
         } else {
 
             document.getElementById("game-over-message").style.display = "block";
-            document.getElementById("final-score").innerText = "Score: " + score;
+            document.getElementById("finalScoreLose").innerText = "Score: " + score;
         }
 
 

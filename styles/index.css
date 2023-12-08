@@ -8,21 +8,26 @@
 }
 
 .c1 {
-    margin: 15px 0px;
+    margin: 15px 0;
 }
 
 #p2, #p4, #p6 {
     background-color: lightgray;
-    padding: 30px 0px;
+    padding: 30px 0;
     border-radius: 16px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 #p1, #p2, #p3, #p4, #p5, #p6{
-    margin: 20px 0px;
+    margin: 20px 0;
 }
 
 img {
-    max-width: 70%;//TODO not working
+    max-width: 100%;/*TODO not working*/
+    max-height: 100%;
     border-radius: 16px;
+}
+
+#img1, #img3, #img4, #img6 {
+    max-height: 300px;
 }

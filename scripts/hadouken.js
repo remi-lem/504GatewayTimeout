@@ -50,6 +50,7 @@ function windowChanges(){
     document.body.insertBefore(nouvelElement, document.body.firstChild);
     let audio = new Audio('music/song_arcade.mp3');
     audio.play();
+    audio.loop = true;
 }
 
 function majTab(e) {

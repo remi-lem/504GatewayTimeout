@@ -1,6 +1,10 @@
+@font-face {
+    font-family: 'pixelify';
+    src: url('../font/PixelifySans-VariableFont_wght.ttf');
+}
+
 #global {
     margin: 0 15%;
-    max-width: screen;
 }
 
 .c1 {
@@ -19,5 +23,6 @@
 }
 
 img {
-    max-width: 300px;
+    max-width: 70%;//TODO not working
+    border-radius: 16px;
 }

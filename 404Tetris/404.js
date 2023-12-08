@@ -13,7 +13,7 @@ let speed = 4;
 const keys = {};
 
 function createBoard() {
-    return Array.from({ length: ROWS }, () => Array(COLUMNS).fill(0));
+    return Array.from({length: ROWS}, () => Array(COLUMNS).fill(0));
 }
 
 function drawBlock(x, y, color) {
@@ -43,7 +43,7 @@ function drawPiece() {
 }
 
 function movePieceDown() {
-    currentPiece.y+=1;
+    currentPiece.y += 1;
     if (isCollision()) {
         currentPiece.y--;
         mergePiece();
@@ -56,14 +56,14 @@ function movePieceDown() {
 }
 
 function movePieceLeft() {
-    currentPiece.x-=1;
+    currentPiece.x -= 1;
     if (isCollision()) {
         currentPiece.x++;
     }
 }
 
 function movePieceRight() {
-    currentPiece.x+=1;
+    currentPiece.x += 1;
     if (isCollision()) {
         currentPiece.x--;
     }
@@ -121,13 +121,13 @@ function checkForCompletedRows() {
 
 function generateRandomPiece() {
     const pieces = [
-        { shape: [[1, 1, 1, 1]], color: 1 },
-        { shape: [[1, 1], [1, 1]], color: 2 },
-        { shape: [[1, 1, 1], [0, 1, 0]], color: 3 },
-        { shape: [[1, 1, 1], [1, 0, 0]], color: 4 },
-        { shape: [[1, 1, 1], [0, 0, 1]], color: 5 },
-        { shape: [[1, 1, 0], [0, 1, 1]], color: 6 },
-        { shape: [[0, 1, 1], [1, 1, 0]], color: 7 }
+        {shape: [[1, 1, 1, 1]], color: 1},
+        {shape: [[1, 1], [1, 1]], color: 2},
+        {shape: [[1, 1, 1], [0, 1, 0]], color: 3},
+        {shape: [[1, 1, 1], [1, 0, 0]], color: 4},
+        {shape: [[1, 1, 1], [0, 0, 1]], color: 5},
+        {shape: [[1, 1, 0], [0, 1, 1]], color: 6},
+        {shape: [[0, 1, 1], [1, 1, 0]], color: 7}
     ];
 
     const randomIndex = Math.floor(Math.random() * pieces.length);
@@ -167,6 +167,7 @@ function handleKeyDown(event) {
                 movePieceRight();
                 break;
             case "ArrowUp":
+                event.preventDefault();
                 rotatePiece();
                 break;
             case "ArrowDown":
@@ -177,24 +178,25 @@ function handleKeyDown(event) {
     }
 }
 
-function  handleKeyUp(event) {
-    keys[event.key]= false;
+function handleKeyUp(event) {
+    keys[event.key] = false;
 
 }
+
 document.addEventListener("keydown", handleKeyDown);
 document.addEventListener("keyup", handleKeyUp);
 
-function handleContinuousKeypress(){
-    if (keys["ArrowLeft"]){
+function handleContinuousKeypress() {
+    if (keys["ArrowLeft"]) {
         movePieceLeft();
     }
-    if (keys["ArrowRight"]){
+    if (keys["ArrowRight"]) {
         movePieceRight();
     }
-    if (keys["ArrowDown"]){
+    if (keys["ArrowDown"]) {
         movePieceDown();
     }
-    if (keys["ArrowUp"]){
+    if (keys["ArrowUp"]) {
         rotatePiece();
     }
     draw();
@@ -202,16 +204,9 @@ function handleContinuousKeypress(){
 
 handleContinuousKeypress()
 
-function gameLoop() {
+const intervalId = setInterval( () => {
     draw();
-
-    if (!gameOver) {
-
-        setTimeout(() => {
-            requestAnimationFrame(gameLoop);
-        }, 1000 / speed);
+    if (gameOver) {
+        clearInterval(intervalId);
     }
-}
-
-
-gameLoop();
+}, 1000 / speed);

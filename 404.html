@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <link rel="icon" href="assets/logo.png" >
+    <link rel="icon" href="assets/logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404</title>
@@ -24,6 +24,15 @@
 
 <div id="game-container">
     <canvas id="tetrisCanvas" width="300" height="600"></canvas>
+</div>
+
+<div id="congratulations-message" style="display: none;">
+    <h2>Félicitations ! Vous avez perdu votre temps !</h2>
+</div>
+
+<div id="game-over-message" style="display: none;">
+    <h2>Game Over</h2>
+    <p>Final Score: <span id="final-score"></span></p>
 </div>
 
 <script src="scripts/404.js"></script>

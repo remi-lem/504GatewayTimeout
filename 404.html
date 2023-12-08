@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="icon" href="assets/logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404</title>
+    <link rel="stylesheet" href="styles/404.css" />
+    <style>
+      canvas {
+        border: 1px solid #000;
+        display: block;
+        margin: 20px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="error">
+      <h1 id="errorPage-title"></h1>
+      <p id="errorPage-message"></p>
+      <h2 id="errorPage-subTitle"></h2>
+    </div>
+
+    <div id="game-container">
+      <canvas id="tetrisCanvas" width="300" height="600"></canvas>
+    </div>
+
+    <script src="Multilingue/multilingue.js"></script>
+<div id="game-container">
+    <canvas id="tetrisCanvas" width="300" height="600"></canvas>
+</div>
+
+<div class="messFin" id="congratulations-message" style="display: none;">
+    <h2>Félicitations ! Vous avez perdu votre temps !</h2>
+    <p>Final Score: <span id="finalScoreWin"></span></p>
+</div>
+
+<div class="messFin" id="game-over-message" style="display: none;">
+    <h2>Game Over</h2>
+    <p>Final Score: <span id="finalScoreLose"></span></p>
+</div>
+
+<script src="scripts/404.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+{
+  "title": "Para el mundo del mañana",
+  "navbar": {
+    "brand": "Barra de navegación",
+    "home": "Inicio",
+    "transport": "Transporte",
+    "personalImpact": "Mi impacto personal",
+    "incomeImportance": "¿Es importante mi ingreso?",
+    "oneDegreeLimit": "¿Es posible alcanzar el límite de 1°C?",
+    "countryAction": "¿Cómo puede actuar mi país?"
+  },
+  "content": {
+    "climateChange": {
+      "title": "¿Qué es el cambio climático?",
+      "description": "El cambio climático se refiere a la alteración a largo plazo de las condiciones climáticas de la Tierra. Este fenómeno, atribuible principalmente a actividades humanas como la quema de combustibles fósiles y la deforestación, provoca un aumento de las emisiones de gases de efecto invernadero, contribuyendo así al calentamiento global. Las consecuencias son fenómenos meteorológicos extremos, subida del nivel del mar, alteraciones ecológicas e impactos socioeconómicos. Mitigar el cambio climático exige iniciativas globales para reducir las emisiones de gases de efecto invernadero y adaptar las sociedades a las transformaciones ya en curso."
+    },
+    "transport": {
+      "title": "\"El transporte no contamina...\"",
+      "description": "Sí, pero en menor medida que si utilizáramos un vehículo privado. Sí, pero en menor medida que si utilizáramos un vehículo privado. A nuestro nivel, individualmente, TODOS podemos contribuir a limitar el calentamiento global y la producción de gases de efecto invernadero. Para ello, debemos revisar nuestros modos de transporte. En Francia, el transporte es el principal emisor de gases de efecto invernadero (31% de las emisiones del país). Podemos limitar o incluso abandonar el coche en favor de la bicicleta y el transporte público, o incluso del coche compartido. También se puede optar por un coche eléctrico o híbrido, que funcione con biocarburantes, por ejemplo. Sólo la aviación es responsable del 2,4% de las emisiones de CO2."
+    },
+    "personalImpact": {
+      "title": "\"No influyo en el calentamiento global...\"",
+      "description": "Aunque nuestro impacto sea menor a escala internacional, a lo largo de nuestra vida puede convertirse rápidamente en significativo. Todos podemos contribuir a limitar nuestras emisiones de CO2. Una forma de hacerlo es limitar nuestro consumo de energía. Hoy podemos consumir menos energía para el mismo uso. En nuestra vida cotidiana, esto significa apagar las luces de las habitaciones en las que no estamos, desconectar los aparatos eléctricos en lugar de dejarlos en modo de espera si no los estamos utilizando, o incluso desenchufar los enchufes que no se están utilizando."
+    },
+    "incomeImportance": {
+      "title": "\"Mis ingresos no influyen en el calentamiento global\"",
+      "description": "¡¡¡FALSO!!! Hoy en día, el 10% de los hogares con mayores ingresos son responsables del 34-45% de las emisiones mundiales. Y una gran parte de la población no puede permitirse comprar un coche nuevo, renovar su piso o su casa, o comer alimentos ecológicos. El Estado y las personas más ricas podrían, por ejemplo, subvencionar los comportamientos buenos para el planeta, animando así a la gente a actuar por el bien de nuestro ecosistema."
+    },
+    "oneDegreeLimit": {
+      "title": "\"Limitar el calentamiento global a 1,5 °C es imposible\"",
+      "description": "Es posible, pero tenemos que empezar AHORA. Para limitar el calentamiento global a +1,5 °C, tenemos que alcanzar la neutralidad de carbono en 2050. Pero para lograrlo, tenemos que reducir nuestro consumo de combustibles fósiles en un 95% en el caso del carbón, un 60% en el del petróleo y un 45% en el del gas para los niveles de 2019. Y no deben construirse nuevas infraestructuras de combustibles fósiles. Debemos dar prioridad a las energías renovables."
+    },
+    "countryAction": {
+      "title": "\"Mi país no puede hacer nada contra el calentamiento global a escala internacional\"",
+      "description": "A escala internacional, según el IPCC, los países desarrollados deben aportar una ayuda financiera de más de 100.000 millones de dólares al año a los países en desarrollo. Más allá de este apoyo financiero, esta transición ecológica no puede tener éxito sin un apoyo tecnológico a los países en desarrollo, sencillamente porque estos países contribuyen menos al calentamiento global. Esto les ayudará a pasar de las energías no renovables a las energías verdes."
+    }
+  },
+  "errorPage": {
+    "title": "Error 404",
+    "message": "La página que buscas no se encuentra. Pruebe este tetris muy bien hecho en su lugar...",
+    "subTitle": "Consigue una puntuación de 404 si puedes."
+  }
+}

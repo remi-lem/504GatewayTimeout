@@ -65,6 +65,11 @@
     <option value="es">Es</option>
   </select>
 </nav>
+
+<button class="btn-dark" type="button" id="btnCompteur">Tu as cliqué <span id="txtCompt">0</span> fois. <span id="txtComptSpec"></span></button>
+<audio id="music" autoplay>
+  <source src="audios/fnafkid.mp3" type="audio/mp3">
+</audio>
 <!-------FIN NAVBAR------->
 
 <!--DEBUT CONTENU-->
@@ -127,10 +132,39 @@
     <div class="c2 col-12 col-md-5">
       <h3 id="countryAction-title"></h3>
       <p id="countryAction-description"></p>
+      </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Un super utilisateur :D</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="timer"><h3 class="txtafter" id="txtSoon"></h3></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer le menu</button>
+      </div>
     </div>
   </div>
 </div>
+
+<div id="baseballon" style="width: 100vh;position: absolute;bottom: 0;"></div>
+
+<script src="scripts/soundballon.js"></script>
+<script src="scripts/compteur.js"></script>
+<script src="scripts/timer.js"></script>
+
 </body>
 
-<footer id="footer"></footer>
+<footer id="footer">
+  <p>&copy; 2023 Pour le monde de demain. Tous droits réservés.</p>
+</footer>
+
+
 </html>

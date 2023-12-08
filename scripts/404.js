@@ -11,6 +11,7 @@ let currentPiece = generateRandomPiece();
 let gameOver = false;
 let speed = 4;
 const keys = {};
+let score = 0;
 
 function createBoard() {
     return Array.from({length: ROWS}, () => Array(COLUMNS).fill(0));
@@ -101,7 +102,6 @@ function mergePiece() {
     });
 }
 
-
 function checkForCompletedRows() {
     let completedRows = [];
     for (let row = ROWS - 1; row >= 0; row--) {
@@ -109,8 +109,16 @@ function checkForCompletedRows() {
             completedRows.push(row);
         }
     }
-
     if (completedRows.length > 0) {
+        // Ajouter 101 points pour chaque ligne cassée
+        score += 101;
+
+        // Vérifier si le score atteint 404
+        if (score > 404) {
+            gameOver = true;
+            score = 404;
+        }
+
         completedRows.forEach(row => {
             board.splice(row, 1);
             board.unshift(Array(COLUMNS).fill(0));
@@ -146,14 +154,41 @@ function draw() {
     drawBoard();
     drawPiece();
 
+    // Affiche le score
+    context.fillStyle = "#fff";
+    context.font = "20px Arial";
+    context.fillText("Score: " + score, 20, 30);
+
     if (!gameOver) {
         movePieceDown();
-    } else {
-        context.fillStyle = "#000";
-        context.font = "30px Arial";
-        context.fillText("Game Over", canvas.width / 2 - 100, canvas.height / 2);
+
+        if (score >= 404) {
+            gameOver = true;
+            score = 404;
+        }
     }
+
+    if (gameOver) {
+        context.fillStyle = "#fff";
+        context.font = "30px Arial";
+
+        if (score === 404) {
+
+            document.getElementById("congratulations-message").style.display = "block";
+            document.getElementById("finalScoreWin").innerText = "Score: " + score;
+        } else {
+
+            document.getElementById("game-over-message").style.display = "block";
+            document.getElementById("finalScoreLose").innerText = "Score: " + score;
+        }
+
+
+        return;
+    }
+
+
 }
+
 
 function handleKeyDown(event) {
     keys[event.key] = true;

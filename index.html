@@ -1,118 +1,136 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Pour le monde de demain</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-        <link href="styles/index.css" rel="stylesheet" type="text/css">
-        <script src="scripts/hadouken.js"></script>
-        <link rel="icon" href="assets/logo.png"><!--TODO-->
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title id="title"></title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link href="styles/index.css" rel="stylesheet" type="text/css" />
+    <script src="scripts/hadouken.js"></script>
+  </head>
 
-    <body>
-        <!-------DEBUT NAVBAR------->
-        <nav id="nav" class="navbar sticky-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-            <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#p1">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#p2">Les transports</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#p3">Mon impact personnel</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#p4">Mon revenu est-il important ?</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#p5">Est-il possible d'atteindre la limite des 1°C ?</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#p6">Comment mon pays peut-il agir ?</a>
-                </li>
-                </ul>
-            </div>
-            </div>
-        </nav>
-        <!-------FIN NAVBAR------->
-
-        <!--DEBUT CONTENU-->
-        <div id="global">
-            <div class="row" id="p1">
-                <div class="c1 col-12 col-md-6">
-                    <h3>C'est quoi le changement climatique ?</h3>
-                    <p>Le changement climatique désigne l'altération à long terme des conditions climatiques de la Terre. Ce phénomène, principalement imputable aux activités humaines telles que la combustion de combustibles fossiles et la déforestation, entraîne l'émission accrue de gaz à effet de serre, contribuant ainsi au réchauffement planétaire. Les conséquences englobent des phénomènes météorologiques extrêmes, une montée du niveau de la mer, des perturbations écologiques et des impacts socio-économiques. Atténuer le changement climatique nécessite des initiatives globales visant à réduire les émissions de gaz à effet de serre et à adapter les sociétés aux transformations déjà en cours.</p>
-                </div>
-                <div class="col-12 col-md-6 d-flex justify-content-center">
-                    <img id="img1" src="assets/infographie_climat.jpg">
-                </div>
-            </div>
-
-            <div class="row" id="p2">
-                <div class="col-12 col-md-6 d-flex justify-content-center">
-                    <img id="img2" src="assets/bus.jpg">
-                </div>
-                <div class="c2 col-12 col-md-5">
-                    <h3>"Les transports ne polluent pas..."</h3>
-                    <p>Si, mais d'une manière moins importante que si l'on utilisait un véhicule personnel. À notre échelle, individuellement, on peut TOUS contribuer à la limitation du réchauffement climatique, de la production de gaz à effet de serre. Pour cela, il faut notamment revoir nos modes de transports. En France, les transports représentent le premier secteur émetteur de gaz à effet de serre (31% des émissions du pays).
-                        On peut limiter voir abandonner la voiture au profit des vélos et des transports en communs ou encore le covoiturage. À défaut d’abandonner la voiture, on peut opter pour une voiture électrique ou hybride, fonctionnant par exemple aux biocarburants. Concernant l’aviation, ce secteur est responsable à lui seul à 2,4% des émissions de CO2. </p>
-                </div>
-            </div>
-
-            <div class="row" id="p3">
-                <div class="c1 col-12 col-md-6">
-                    <h3>"Je n'ai aucun impact sur le réchauffement climatique..."</h3>
-                    <p>Même si notre impact est moins important à l'échelle internationale, sur toute notre vie, cela peut vite devenir important. Nous pouvons chacun contribuer à limiter nos émissions de CO2. Cela passe notamment par limiter notre consommation énergétique. Aujourd’hui, nous pouvons consommer moins d’énergie pour un même usage. Dans notre quotidien, cela correspond à éteindre la lumière des pièces où nous ne sommes pas, éteindre ses appareils électriques au lieu de les laisser en veille si nous ne les utilisons pas, ou même débrancher ses prises branchées qui ne servent à rien !</p>
-                </div>
-                <div class="col-12 col-md-6 d-flex justify-content-center">
-                    <img id="img3" src="assets/rechauffement.png">
-                </div>
-            </div>
-
-            <div class="row" id="p4">
-                <div class="col-12 col-md-6 d-flex justify-content-center">
-                    <img id="img4" src="assets/revenue.jpg">
-                </div>
-                <div class="c2 col-12 col-md-5">
-                    <h3>"Mon revenu n'impacte pas le réchauffement climatique"</h3>
-                    <p>FAUX!!! Aujourd’hui, 10 % des ménages avec les revenus les plus élevés représentent 34 à 45 % des émissions globales. Et une grande partie de la population n’a pas les moyens de se payer une nouvelle voiture, de rénover son appartement ou sa maison, de manger des aliments bio. L’État et les personnes les plus riches pourraient par exemple subventionner les comportements bons pour la planète, encouragant ainsi la poulation à agir pour le bien de notre écosystème.</p>
-                </div>
-            </div>
-
-            <div class="row" id="p5">
-                <div class="c1 col-12 col-md-6">
-                    <h3>"Limiter le réchauffement climatique à 1.5°C c'est impossible"</h3>
-                    <p>C'est possible, mais il faut s'y mettre dès MAINTENANT. Afin de limiter le réchauffement climatique à +1.5°C, il est nécessaire d’atteindre la neutralité carboned'ici 2050. Mais pour cela, il faut réduire notre consommation de ressources fossiles, à hauteur de 95% pour le charbon, 60% pour le pétrole, 45% pour le gaz par rapport à 2019. Sans oublier qu’aucune infrastructure de production d’énergie fossile ne doit être construite. Nous devons privilégier les énergies renouvelables.</p>
-                </div>
-                <div class="col-12 col-md-6 d-flex justify-content-center">
-                    <img id="img5" src="assets/temp.jpg">
-                </div>
-            </div>
-
-            <div class="row" id="p6">
-                <div class="col-12 col-md-6 d-flex justify-content-center">
-                    <img id="img6" src="assets/cop27.png">
-                </div>
-                <div class="c2 col-12 col-md-5">
-                    <h3>"Mon pays ne peut rien faire contre le réchauffement climatique à l'échelle internationale"</h3>
-                    <p>À l’échelle internationale, d’après le GIEC, les pays développés doivent apporter un soutien financier de plus de 100 milliards de dollars par an aux pays en développement. Au-delà de ce soutien financier, cette transition écologique ne pourra réussir sans un soutien technologique aux pays en développement tout simplement, car la participation de ces pays au réchauffement est moindre. Cela les aidra à abandonner les énergies non-renouvelables au profit d'énergies vertes.</p>
-                </div>       
-            </div>
+  <body>
+    <!-------DEBUT NAVBAR------->
+    <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" id="navbar-brand" href="#"></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#p1" id="navbar-home"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#p2" id="navbar-transport"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#p3" id="navbar-personalImpact"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#p4" id="navbar-incomeImportance"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#p5" id="navbar-oneDegreeLimit"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#p6" id="navbar-countryAction"></a>
+            </li>
+          </ul>
         </div>
-        
-    </body>
+      </div>
+      <select id="options" onchange="afficherSelection()">
+        <option value="fr">Fr</option>
+        <option value="en">En</option>
+        <option value="es">Es</option>
+      </select>
+    </nav>
+    <!-------FIN NAVBAR------->
 
-    <footer id="footer">
-        
-    </footer>
+    <!--DEBUT CONTENU-->
+    <div id="global">
+      <div class="row" id="p1">
+        <div class="c1 col-12 col-md-6">
+          <h3 id="climateChange-title"></h3>
+          <p id="climateChange-description"></p>
+        </div>
+        <div class="col-12 col-md-6 d-flex justify-content-center">
+          <img src="assets/c'est_quoi_le_réchauffement.jpg" />
+        </div>
+      </div>
 
+      <div class="row" id="p2">
+        <div class="col-12 col-md-6 d-flex justify-content-center">
+          <img src="assets/bus.jpg" />
+        </div>
+        <div class="c2 col-12 col-md-5">
+          <h3 id="transport-title"></h3>
+          <p id="transport-description"></p>
+        </div>
+      </div>
+
+      <div class="row" id="p3">
+        <div class="c1 col-12 col-md-6">
+          <h3 id="personalImpact-title"></h3>
+          <p id="personalImpact-description"></p>
+        </div>
+        <div class="col-12 col-md-6 d-flex justify-content-center">
+          <img src="assets/réchauffement.png" />
+        </div>
+      </div>
+
+      <div class="row" id="p4">
+        <div class="col-12 col-md-6 d-flex justify-content-center">
+          <img src="assets/revenue.jpg" />
+        </div>
+        <div class="c2 col-12 col-md-5">
+          <h3 id="incomeImportance-title"></h3>
+          <p id="incomeImportance-description"></p>
+        </div>
+      </div>
+
+      <div class="row" id="p5">
+        <div class="c1 col-12 col-md-6">
+          <h3 id="oneDegreeLimit-title"></h3>
+          <p id="oneDegreeLimit-description"></p>
+
+        </div>
+        <div class="col-12 col-md-6 d-flex justify-content-center">
+          <img src="assets/temp.jpg" />
+        </div>
+      </div>
+
+      <div class="row" id="p6">
+        <div class="col-12 col-md-6 d-flex justify-content-center">
+          <img src="assets/Sutcliffe-COP27-blog-featured-image.png" />
+        </div>
+        <div class="c2 col-12 col-md-5">
+          <h3 id="countryAction-title"></h3>
+          <p id="countryAction-description"></p>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <footer id="footer"></footer>
+  <script src="Multilingue/multilingue.js"></script>
 </html>

@@ -16,6 +16,8 @@ body {
 }
 
 canvas {
+    display: block;
+    margin: 20px auto;
     border: 2px solid #61dafb;
     box-shadow: 0 0 10px rgba(97, 218, 251, 0.8);
     text-align: center;
@@ -74,8 +76,3 @@ a {
 .messFin{
     font-size: 1.5rem;
 }
-
-
-
-
-

@@ -171,24 +171,16 @@ function draw() {
     if (gameOver) {
         context.fillStyle = "#fff";
         context.font = "30px Arial";
-
         if (score === 404) {
-
             document.getElementById("congratulations-message").style.display = "block";
-            document.getElementById("finalScoreWin").innerText = "Score: " + score;
+            document.getElementById("finalScoreWin").innerText = score;
         } else {
-
             document.getElementById("game-over-message").style.display = "block";
-            document.getElementById("finalScoreLose").innerText = "Score: " + score;
+            document.getElementById("finalScoreLose").innerText = score;
         }
-
-
         return;
     }
-
-
 }
-
 
 function handleKeyDown(event) {
     keys[event.key] = true;
@@ -215,7 +207,6 @@ function handleKeyDown(event) {
 
 function handleKeyUp(event) {
     keys[event.key] = false;
-
 }
 
 document.addEventListener("keydown", handleKeyDown);

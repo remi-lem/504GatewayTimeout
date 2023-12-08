@@ -13,7 +13,6 @@ function check(e) {
             windowChanges();
         }
     }
-    console.log(queue)
 }
 
 function testCombinaison(){

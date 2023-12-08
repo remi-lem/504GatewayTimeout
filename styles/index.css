@@ -11,18 +11,51 @@
     margin: 15px 0px;
 }
 
-#p2, #p4, #p6 {
+#p2,
+#p4,
+#p6 {
     background-color: lightgray;
     padding: 30px 0px;
     border-radius: 16px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-#p1, #p2, #p3, #p4, #p5, #p6{
+#p1,
+#p2,
+#p3,
+#p4,
+#p5,
+#p6 {
     margin: 20px 0px;
 }
 
+#options {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #2c3034;
+    color: #ffffff;
+    width: 70px;
+    position: relative;
+    right: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 991px) {
+    #options {
+        right: inherit;
+        left: 10px;
+        margin-top: 15px;
+    }
+}
+
+#options option {
+    background-color: #2c3034;
+    color: #ffffff;
+}
+
 img {
-    max-width: 70%;//TODO not working
+    max-width: 70%; //TODO not working
     border-radius: 16px;
 }

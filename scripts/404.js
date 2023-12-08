@@ -175,6 +175,7 @@ function draw() {
         if (score === 404) {
 
             document.getElementById("congratulations-message").style.display = "block";
+            document.getElementById("final-score").innerText = "Score: " + score;
         } else {
 
             document.getElementById("game-over-message").style.display = "block";

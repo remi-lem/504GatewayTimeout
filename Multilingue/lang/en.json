@@ -1,0 +1,43 @@
+{
+  "title": "For the world of tomorrow",
+  "navbar": {
+    "brand": "Navbar",
+    "home": "Home",
+    "transport": "Transportation",
+    "personalImpact": "My Personal Impact",
+    "incomeImportance": "Is My Income Important?",
+    "oneDegreeLimit": "Is It Possible to Reach the 1°C Limit?",
+    "countryAction": "How Can My Country Act?"
+  },
+  "content": {
+    "climateChange": {
+      "title": "What is climate change ?",
+      "description": "Climate change refers to the long-term alteration of the Earth's climatic conditions. This phenomenon, which is mainly attributable to human activities such as the burning of fossil fuels and deforestation, leads to increased emissions of greenhouse gases, thereby contributing to global warming. The consequences include extreme weather events, rising sea levels, ecological disruption and socio-economic impacts. Mitigating climate change requires global initiatives to reduce greenhouse gas emissions and adapt societies to the transformations already underway."
+    },
+    "transport": {
+      "title": "\"Transport does not pollute...\"",
+      "description": "Yes, but to a lesser extent than if we were to use a private car. Yes, but to a lesser extent than if we were to use a private car. At our level, individually, we can ALL contribute to limiting global warming and the production of greenhouse gases. To do this, we need to review our modes of transport. In France, transport is the biggest emitter of greenhouse gases (31% of the country's emissions). We can limit or even abandon the car in favour of bicycles and public transport, or even car-sharing. Alternatively, you could opt for an electric or hybrid car, powered by biofuels, for example. Aviation alone is responsible for 2.4% of CO2 emissions."
+    },
+    "personalImpact": {
+      "title": "\"I have no impact on global warming...\"",
+      "description": "Even if our impact is less significant on an international scale, over our lifetime it can quickly become significant. We can each contribute to limiting our CO2 emissions. One way of doing this is to limit our energy consumption. Today, we can consume less energy for the same amount of use. In our day-to-day lives, this means switching off lights in rooms we're not in, switching off electrical appliances instead of leaving them on standby if we're not using them, or even unplugging plugs that are not being used !"
+    },
+    "incomeImportance": {
+      "title": "\"My income has no impact on global warming\"",
+      "description": "FALSE !!! Today, 10% of households with the highest incomes account for 34-45% of global emissions. And a large proportion of the population cannot afford to buy a new car, renovate their flat or house, or eat organic food. The State and the wealthiest individuals could, for example, subsidise behaviour that is good for the planet, thereby encouraging people to act for the good of our ecosystem."
+    },
+    "oneDegreeLimit": {
+      "title": "\"Limiting global warming to 1.5°C is impossible\"",
+      "description": "It is possible, but we need to start NOW. To limit global warming to +1.5°C, we need to achieve carbon neutrality by 2050. But to achieve this, we need to reduce our consumption of fossil fuels by 95% for coal, 60% for oil and 45% for gas by 2019 levels. And no new fossil fuel infrastructure should be built. We must give priority to renewable energies."
+    },
+    "countryAction": {
+      "title": "\"My country can do nothing about global warming",
+      "description": "At international level, according to the IPCC, developed countries must provide financial support of more than 100 billion dollars a year to developing countries. Over and above this financial support, this ecological transition cannot succeed without technological support for developing countries, quite simply because these countries contribute less to global warming. This will help them to switch from non-renewable energies to green energies."
+    }
+  },
+  "errorPage": {
+    "title": "Error 404",
+    "message": "The page you are looking for could not be found. Why not try this excellently made Tetris instead...",
+    "subTitle": "Reach a score of 404 if you can!"
+  }
+}

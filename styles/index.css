@@ -1,33 +1,37 @@
-@font-face {
-    font-family: 'pixelify';
-    src: url('../font/PixelifySans-VariableFont_wght.ttf');
-}
-
 #global {
     margin: 0 15%;
+    max-width: screen;
 }
 
 .c1 {
-    margin: 15px 0;
+    margin: 15px 0px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
 }
 
 #p2, #p4, #p6 {
     background-color: lightgray;
-    padding: 30px 0;
+    padding: 30px 0px;
     border-radius: 16px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 #p1, #p2, #p3, #p4, #p5, #p6{
-    margin: 20px 0;
+    margin: 20px 0px;
 }
 
 img {
-    max-width: 100%;/*TODO not working*/
-    max-height: 100%;
-    border-radius: 16px;
+    max-width: 300px;
 }
 
-#img1, #img3, #img4, #img6 {
-    max-height: 300px;
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
 }
